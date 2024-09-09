@@ -153,11 +153,14 @@ body {
     border-radius: 25% 50%;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.356);
     filter: blur(0.25px);
+    transition: 1s;
 }
 
 .event-content img:hover {
     filter: none;
     transform: scale(1.1);
+    border-radius: 5vh;
+    transition: 1s;
 }
 
 .event-content a{
@@ -239,44 +242,76 @@ body {
 #passes {
     background-color: #111;
     color: white;
+    padding: 50px 0;
+  }
+  
+  h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #ff3b3b;
+    letter-spacing: 2px;
   }
   
   .pass-card {
     background-color: rgba(255, 255, 255, 0.1);
-    width: 20vw;
-    height: 60vh;
+    padding: 30px;
     border-radius: 15px;
-    transition: all 0.3s ease-in-out;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: all 1s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     border: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    overflow: hidden;
+    height: 60vh;
+    width: 20vw;
   }
   
   .pass-card h3 {
-    margin-bottom: 15px;
-    font-size: 24px;
+    margin-bottom: 20px;
+    font-size: 28px;
+    text-transform: uppercase;
+    color: #ff3b3b;
+    transition: color 0.4s ease;
   }
   
   .pass-card p {
-    margin: 5px 0;
+    margin: 10px 0;
+    font-size: 18px;
+  }
+  
+  .price {
+    font-size: 22px;
+    font-weight: bold;
+    color: #ff3b3b;
+    margin-bottom: 10px;
+  }
+  
+  .pass-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255, 0, 0, 0.5), transparent);
+    transition: all 1s ease;
+  }
+  
+  .pass-card:hover::before {
+    left: 100%;
   }
   
   .pass-card:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-    box-shadow: 0 4px 20px rgba(255, 0, 0, 0.7);
+    background-color: rgba(255, 255, 255, 0.066);
+    box-shadow: 0 6px 20px rgba(255, 0, 0, 0.7);
     border: 1px solid rgba(255, 0, 0, 0.7);
-    transition: 1s;
     backdrop-filter: blur(10px);
+    transform: translateY(-10px);
+    transition: 1s;
   }
   
-
-  .pass-card:hover h3, .pass-card:hover p {
-    color: #ffffff;
+  .pass-card:hover h3, .pass-card:hover .price {
+    color: white;
   }
-  
-  .pass-card:hover {
-    transform: scale(1.05);
-  }
-  
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -296,4 +331,8 @@ body {
     .agenda-item::before {
         left: 40px;
     }
+
+    .pass-card {
+        height: auto;
+      }
 }
