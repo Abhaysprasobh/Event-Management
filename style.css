@@ -333,6 +333,8 @@ body {
     }
 
     .pass-card {
-        height: auto;
+        height: 60vh;
+        width: 60vw;
+        text-align: center;
       }
 }
