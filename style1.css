@@ -100,18 +100,20 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, 75%);
-    background-color: #333;
+    background-color: #3333335b;
     padding: 2rem;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     z-index: 1;
-    width: 100vw;
-    max-width: 400px;
+    width: 60%;
+    height: 30vh;
+    max-width: 300px;
 }
 
 .login-form h2 {
     margin-bottom: 1.5rem;
     color: #e74c3c;
+    text-align: center;
 }
 
 .login-form .form-control {
@@ -119,6 +121,16 @@ body {
     background-color: #4444443a;
     border: 1px solid #555;
     color: #fff;
+}
+
+.mb-3{
+text-align: center;
+margin-top: 1vh;
+}
+
+#btm{
+    margin-top: 4vh;
+    margin-left: 10vw;
 }
 
 .login-form .form-control:focus {

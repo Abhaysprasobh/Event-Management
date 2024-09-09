@@ -112,10 +112,11 @@ body {
 /* Hero section */
 .hero-section {
     height: 100vh;
-    background-image: url('assets/hero-bg.jpg');
+    background-image: url('assets/m3.1.jpg');
     background-size: cover;
     background-position: center;
     position: relative;
+    border-radius: 5vw;
 }
 
 .hero-section::before {
@@ -125,7 +126,8 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.189);
+    border-radius: 5vw;
 }
 
 .countdown {
@@ -150,7 +152,7 @@ body {
     border: 1vh solid rgba(255, 255, 255, 0.267);
     border-radius: 25% 50%;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.356);
-    filter: blur(1px);
+    filter: blur(0.25px);
 }
 
 .event-content img:hover {
@@ -233,6 +235,48 @@ body {
     background-color: #333;
     box-shadow: 0 3px 12px rgba(0, 0, 0, 0.3);
 }
+
+#passes {
+    background-color: #111;
+    color: white;
+  }
+  
+  .pass-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 20vw;
+    height: 60vh;
+    border-radius: 15px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .pass-card h3 {
+    margin-bottom: 15px;
+    font-size: 24px;
+  }
+  
+  .pass-card p {
+    margin: 5px 0;
+  }
+  
+  .pass-card:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 20px rgba(255, 0, 0, 0.7);
+    border: 1px solid rgba(255, 0, 0, 0.7);
+    transition: 1s;
+    backdrop-filter: blur(10px);
+  }
+  
+
+  .pass-card:hover h3, .pass-card:hover p {
+    color: #ffffff;
+  }
+  
+  .pass-card:hover {
+    transform: scale(1.05);
+  }
+  
 
 /* Responsive Design */
 @media (max-width: 768px) {
