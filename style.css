@@ -43,7 +43,7 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
     transform-style: preserve-3d;
     transition: transform 1.5s ease, background-color 1s;
-    opacity: 0.3;
+    opacity: 0.9;
 }
 
 /* Add hover effect with a wave-like transition */
