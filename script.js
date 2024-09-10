@@ -33,7 +33,6 @@ function showSection(section) {
 }
 
 // JavaScript to dynamically generate cubes
-// JavaScript to dynamically generate cubes
 document.addEventListener('DOMContentLoaded', () => {
     const cubesContainer = document.querySelector('.cubes-container');
     const containerWidth = window.innerWidth;

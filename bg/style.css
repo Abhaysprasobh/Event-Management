@@ -1,0 +1,96 @@
+/* Global styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: #fff;
+    overflow-x: hidden;
+    height: 200vh;
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+}
+
+.background-effects {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    overflow: hidden;
+    pointer-events: none; /* Disable interaction with the cubes */
+}
+
+/* Expanded cubes-container to cover the entire screen */
+.cubes-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 200vh; /* Covering twice the viewport height for scroll effect */
+    display: flex;
+    flex-wrap: wrap;
+    z-index: 0;
+}
+
+.cube {
+    width: 45px;
+    height: 45px;
+    background-color: rgba(255, 255, 255, 0.05);
+    margin: 2px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    transform-style: preserve-3d;
+    transition: transform 1.5s ease, background-color 1s;
+    opacity: 0.3;
+}
+
+/* Add hover effect with a wave-like transition */
+.cube:hover {
+    background-color: rgba(231, 76, 60, 0.7);
+    transform: scale(1.1) rotateY(180deg);
+    opacity: 1;
+}
+
+/* Wave animation effect */
+.wave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 0, 0, 0.3), transparent 40%),
+                radial-gradient(circle, rgba(255, 0, 0, 0.6), transparent 60%);
+    background-size: 100% 100%;
+    animation: wave 2s linear infinite;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Cube animation for background */
+@keyframes wave {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 0 100%;
+    }
+}
+
+/* Additional styling for interactivity and aesthetic */
+.cube:nth-child(odd) {
+    animation: rotateCube 5s ease-in-out infinite;
+}
+
+@keyframes rotateCube {
+    0% {
+        transform: rotateY(0deg);
+    }
+    50% {
+        transform: rotateY(180deg);
+    }
+    100% {
+        transform: rotateY(360deg);
+    }
+}
