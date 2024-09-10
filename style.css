@@ -163,7 +163,7 @@ body {
 
 /* Agenda Section */
 .agenda-section {
-    background-color: #121212;
+    background-color: #1212124c;
     color: white;
 }
 
@@ -176,32 +176,35 @@ body {
 .agenda-item {
     display: flex;
     align-items: center;
-    margin-bottom: 20px; 
+    margin-bottom: 5vh; 
     position: relative;
+    transition: 1s;
 }
 
 .agenda-time {
     flex-shrink: 0;
-    width: 80px; 
     text-align: center;
-    background-color: #ff3c41;
-    padding: 8px;
+    background-color: #fc11199e;
+    padding: 18px;
     border-radius: 50%;
     font-size: 0.9rem; 
     font-weight: bold;
     color: white;
     z-index: 1;
+    box-shadow: 0 6px 14px rgba(255, 0, 0, 0.7);
+    border: 1px solid rgba(255, 0, 0, 0.7);
+    margin: 1vh 0;
 }
 
 .agenda-content {
-    background-color: #222;
+    background-color: #ffffff2d;
     padding: 15px; 
     border-radius: 8px;
     width: 100%;
     position: relative;
     margin-left: 25px; 
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
-    transition: all 0.3s ease;
+    transition: all 1s ease;
 }
 
 .agenda-item::before {
@@ -227,6 +230,12 @@ body {
 .agenda-item:hover .agenda-content {
     background-color: #333;
     box-shadow: 0 3px 12px rgba(0, 0, 0, 0.3);
+    background-color: rgba(255, 255, 255, 0.066);
+    box-shadow: 0 6px 20px rgba(255, 0, 0, 0.7);
+    border: 1px solid rgba(255, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    transform: translateY(-5px);
+    transition: 1s;
 }
 
 /* passes */
@@ -305,8 +314,74 @@ body {
     color: white;
   }
 
+  /* Footer Styling */
+.footer {
+    background-color: #111;
+    color: #fff;
+}
+
+.footer h5 {
+    color: #ff3c41;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.footer p, .footer ul {
+    font-size: 0.9rem;
+}
+
+.footer ul {
+    padding-left: 0;
+}
+
+.footer ul li {
+    list-style: none;
+    margin-bottom: 8px;
+}
+
+.footer .social-icons a {
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.footer hr {
+    border: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer p {
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.footer .social-icons a:hover {
+    filter: drop-shadow( 0 0 10px #ff3c41);
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
+    .hero-section {
+        height: 70vh;
+        background-position: top;
+    }
+
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-section p {
+        font-size: 1.2rem;
+    }
+
+    .countdown {
+        font-size: 1.5rem;
+    }
+
+    #countdown span {
+        font-size: 2rem;
+    }
+    
     .agenda-timeline {
         padding-left: 20px;
     }
