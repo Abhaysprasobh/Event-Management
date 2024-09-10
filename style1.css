@@ -149,3 +149,9 @@ margin-top: 1vh;
 .login-form .btn-primary:hover {
     background-color: #c0392b;
 }
+
+#reglnk{
+    text-decoration: none;
+    font-size: large;
+    color: green;
+}
