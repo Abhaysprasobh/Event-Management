@@ -1,4 +1,4 @@
-/* Global styles */
+
 body {
     font-family: 'Arial', sans-serif;
     background-color: #121212;
@@ -20,40 +20,30 @@ body {
     height: 100vh;
     z-index: 0;
     overflow: hidden;
-    pointer-events: none; /* Disable interaction with the cubes */
 }
 
-/* Expanded cubes-container to cover the entire screen */
 .cubes-container {
     position: absolute;
     top: 0;
     left: 0;
     width: 100vw;
-    height: 200vh; /* Covering twice the viewport height for scroll effect */
+    height: 200vh; 
     display: flex;
     flex-wrap: wrap;
     z-index: 0;
 }
 
 .cube {
-    width: 45px;
-    height: 45px;
+    width: 43px;
+    height: 43px;
     background-color: rgba(255, 255, 255, 0.05);
     margin: 2px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
     transform-style: preserve-3d;
-    transition: transform 1.5s ease, background-color 1s;
+    transition: transform 1.5s ease;
     opacity: 0.9;
 }
 
-/* Add hover effect with a wave-like transition */
-.cube:hover {
-    background-color: rgba(231, 76, 60, 0.7);
-    transform: scale(1.1) rotateY(180deg);
-    opacity: 1;
-}
-
-/* Wave animation effect */
 .wave {
     position: absolute;
     top: 0;
@@ -68,7 +58,6 @@ body {
     pointer-events: none;
 }
 
-/* Cube animation for background */
 @keyframes wave {
     0% {
         background-position: 0 0;
@@ -78,9 +67,8 @@ body {
     }
 }
 
-/* Additional styling for interactivity and aesthetic */
 .cube:nth-child(odd) {
-    animation: rotateCube 5s ease-in-out infinite;
+    animation: rotateCube 5s infinite;
 }
 
 @keyframes rotateCube {
@@ -112,11 +100,13 @@ body {
 /* Hero section */
 .hero-section {
     height: 100vh;
+    width: 100vw;
     background-image: url('assets/m3.1.jpg');
     background-size: cover;
     background-position: center;
     position: relative;
     border-radius: 5vw;
+    left: 0;
 }
 
 .hero-section::before {
@@ -179,25 +169,25 @@ body {
 
 .agenda-timeline {
     position: relative;
-    padding-left: 40px; /* Reduced padding for compactness */
+    padding-left: 40px; 
     margin-top: 20px;
 }
 
 .agenda-item {
     display: flex;
     align-items: center;
-    margin-bottom: 20px; /* Reduced margin */
+    margin-bottom: 20px; 
     position: relative;
 }
 
 .agenda-time {
     flex-shrink: 0;
-    width: 80px; /* Smaller size for compact look */
+    width: 80px; 
     text-align: center;
     background-color: #ff3c41;
-    padding: 8px; /* Smaller padding */
+    padding: 8px;
     border-radius: 50%;
-    font-size: 0.9rem; /* Smaller font */
+    font-size: 0.9rem; 
     font-weight: bold;
     color: white;
     z-index: 1;
@@ -205,19 +195,19 @@ body {
 
 .agenda-content {
     background-color: #222;
-    padding: 15px; /* Reduced padding */
+    padding: 15px; 
     border-radius: 8px;
     width: 100%;
     position: relative;
-    margin-left: 25px; /* Reduced margin */
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15); /* Lighter shadow for compact effect */
+    margin-left: 25px; 
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
     transition: all 0.3s ease;
 }
 
 .agenda-item::before {
     content: "";
     position: absolute;
-    left: 95px; /* Adjusted to match smaller time size */
+    left: 95px; 
     top: 0;
     bottom: 0;
     width: 2px;
@@ -225,12 +215,12 @@ body {
 }
 
 .agenda-content h5 {
-    font-size: 1.2rem; /* Smaller heading */
+    font-size: 1.2rem; 
     margin-bottom: 8px;
 }
 
 .agenda-content p {
-    font-size: 0.9rem; /* Smaller text */
+    font-size: 0.9rem; 
     margin-bottom: 0;
 }
 
@@ -238,6 +228,8 @@ body {
     background-color: #333;
     box-shadow: 0 3px 12px rgba(0, 0, 0, 0.3);
 }
+
+/* passes */
 
 #passes {
     background-color: #111;

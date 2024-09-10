@@ -32,7 +32,7 @@ function showSection(section) {
     document.getElementById(section).classList.remove('d-none');
 }
 
-// JavaScript to dynamically generate cubes
+// cubes
 document.addEventListener('DOMContentLoaded', () => {
     const cubesContainer = document.querySelector('.cubes-container');
     const containerWidth = window.innerWidth;
@@ -48,6 +48,3 @@ document.addEventListener('DOMContentLoaded', () => {
         cubesContainer.appendChild(cube);
     }
 });
-
-
-
