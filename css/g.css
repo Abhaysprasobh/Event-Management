@@ -143,7 +143,6 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.1);
     position: relative;
     overflow: hidden;
-    align-self:center;
     height: 60vh;
     width: 20vw;
   }
@@ -259,6 +258,6 @@ body {
     .pass-card {
         height: 60vh;
         width: 60vw;
-        text-align: center;
+        margin-left: 10vw;
       }
 }
