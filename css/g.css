@@ -140,7 +140,7 @@ body {
     transition: all 1s ease-in-out;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    position: absolute;
+    position: relative;
     overflow: hidden;
     height: 60vh;
     width: 20vw;
