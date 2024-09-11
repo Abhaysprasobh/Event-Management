@@ -454,7 +454,7 @@ body {
 /* Responsive Design */
 @media (max-width: 768px) {
     .hero-section {
-        height: 70vh;
+        height: 100vh;
         background-position: top;
     }
 
@@ -494,6 +494,6 @@ body {
     .pass-card {
         height: 60vh;
         width: 60vw;
-        text-align: center;
+        margin-left: 10vw;
       }
 }
