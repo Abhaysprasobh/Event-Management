@@ -1,0 +1,248 @@
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: #fff;
+    overflow-x: hidden;
+    height: 200vh;
+    pointer-events: none;
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+}
+
+.background-effects {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.cubes-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 200vh; 
+    display: flex;
+    flex-wrap: wrap;
+    z-index: 0;
+}
+
+.cube {
+    width: 43px;
+    height: 43px;
+    background-color: rgba(255, 255, 255, 0.05);
+    margin: 2px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    transition: transform 1.5s ease;
+    opacity: 0.9;
+}
+
+.wave {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 0, 0, 0.3), transparent 40%),
+                radial-gradient(circle, rgba(255, 0, 0, 0.6), transparent 60%);
+    background-size: 100% 100%;
+    animation: wave 2s linear infinite;
+    z-index: 0;
+    pointer-events: none;
+}
+
+@keyframes wave {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 0 100%;
+    }
+}
+
+.cube:nth-child(odd) {
+    animation: rotateCube 5s ease-in-out infinite;
+}
+
+@keyframes rotateCube {
+    0% {
+        transform: rotateY(0deg);
+    }
+    50% {
+        transform: rotateY(180deg);
+    }
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+
+#passes {
+    background-color: #111;
+    color: white;
+    padding: 50px 0;
+  }
+  
+  h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #ff3b3b;
+    letter-spacing: 2px;
+  }
+  
+  .pass-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 15px;
+    transition: all 1s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    overflow: hidden;
+    height: 60vh;
+    width: 20vw;
+  }
+  
+  .pass-card h3 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    text-transform: uppercase;
+    color: #ff3b3b;
+    transition: color 0.4s ease;
+  }
+  
+  .pass-card p {
+    margin: 10px 0;
+    font-size: 18px;
+  }
+  
+  .price {
+    font-size: 22px;
+    font-weight: bold;
+    color: #ff3b3b;
+    margin-bottom: 10px;
+  }
+  
+  .pass-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255, 0, 0, 0.5), transparent);
+    transition: all 1s ease;
+  }
+  
+  .pass-card:hover::before {
+    left: 100%;
+  }
+  
+  .pass-card:hover {
+    background-color: rgba(255, 255, 255, 0.066);
+    box-shadow: 0 6px 20px rgba(255, 0, 0, 0.7);
+    border: 1px solid rgba(255, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    transform: translateY(-10px);
+    transition: 1s;
+  }
+  
+  .pass-card:hover h3, .pass-card:hover .price {
+    color: white;
+  }
+
+  /* Footer Styling */
+.footer {
+    background-color: #111;
+    color: #fff;
+}
+
+.footer h5 {
+    color: #ff3c41;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.footer p, .footer ul {
+    font-size: 0.9rem;
+}
+
+.footer ul {
+    padding-left: 0;
+}
+
+.footer ul li {
+    list-style: none;
+    margin-bottom: 8px;
+}
+
+.footer .social-icons a {
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.footer hr {
+    border: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer p {
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.footer .social-icons a:hover {
+    filter: drop-shadow( 0 0 10px #ff3c41);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-section {
+        height: 70vh;
+        background-position: top;
+    }
+
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-section p {
+        font-size: 1.2rem;
+    }
+
+    .countdown {
+        font-size: 1.5rem;
+    }
+
+    #countdown span {
+        font-size: 2rem;
+    }
+    
+    .agenda-timeline {
+        padding-left: 20px;
+    }
+
+    .agenda-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .agenda-time {
+        margin-bottom: 10px;
+    }
+
+    .agenda-item::before {
+        left: 40px;
+    }
+
+    .pass-card {
+        height: 60vh;
+        width: 60vw;
+        text-align: center;
+      }
+}
