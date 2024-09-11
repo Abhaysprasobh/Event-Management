@@ -142,9 +142,9 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.1);
     position: relative;
     overflow: hidden;
+    display: flex;
     height: 60vh;
     width: 20vw;
-    text-align: center;
   }
   
   .pass-card h3 {
