@@ -5,202 +5,485 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aageneya - GEC Barton Hill College Fest</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="g.css">
+    <link rel="stylesheet" href="css/g.css">
 </head>
 <body>
     <div class="container">
+        <!-- Background Effects and Navbar -->
         <div class="background-effects">
             <div class="cubes-container">
                 <div class="cubes"></div>
                 <div class="wave"></div>
             </div>
         </div>
-    <!-- Enter the code you want here-->
-         <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-transparent">
-        <div class="container">
-            <a class="navbar-brand" href="#">Aageneya</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#events">Events</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#passes">Passes</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
-                </ul>
+
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-transparent">
+            <div class="container">
+                <a class="navbar-brand" href="#">Aageneya</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#events">Events</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#passes">Passes</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Events Section -->
+        <section id="events" class="events-section py-5">
+            <div class="container text-center">
+                <h2 class="text-center text-light mb-4">Our Events</h2>
+                <div class="btn-group mb-4" role="group">
+                    <button type="button" class="btn btn-outline-light" onclick="showSection('fun')">Fun</button>
+                    <button type="button" class="btn btn-outline-light" onclick="showSection('projects')">Projects</button>
+                    <button type="button" class="btn btn-outline-light" onclick="showSection('workshops')">Workshops</button>
+                </div>
+
+                <!-- Fun Section -->
+                <div id="fun" class="event-content">
+                    <div class="row">
+                        <!-- Passes for Fun Section -->
+                        <div class="col-md-4 mb-4">
+                            <div class="pass-card">
+                                <img src="assets/m4.jpg" class="img-fluid" alt="Fun Image 1">
+                                <h3>Competition Pass</h3>
+                                <p class="price">₹150</p>
+                                <p>Access to fun activities on Day 1 of the fest.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                          <div class="pass-card">
+                              <img src="assets/m4.jpg" class="img-fluid" alt="Fun Image 1">
+                              <h3>Competition Pass</h3>
+                              <p class="price">₹150</p>
+                              <p>Access to fun activities on Day 1 of the fest.</p>
+                          </div>
+                      </div>
+                      <div class="col-md-4 mb-4">
+                        <div class="pass-card">
+                            <img src="assets/m4.jpg" class="img-fluid" alt="Fun Image 1">
+                            <h3>Competition Pass</h3>
+                            <p class="price">₹150</p>
+                            <p>Access to fun activities on Day 1 of the fest.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                      <div class="pass-card">
+                          <img src="assets/m4.jpg" class="img-fluid" alt="Fun Image 1">
+                          <h3>Competition Pass</h3>
+                          <p class="price">₹150</p>
+                          <p>Access to fun activities on Day 1 of the fest.</p>
+                      </div>
+                  </div>
+                  <div class="col-md-4 mb-4">
+                    <div class="pass-card">
+                        <img src="assets/m4.jpg" class="img-fluid" alt="Fun Image 1">
+                        <h3>Competition Pass</h3>
+                        <p class="price">₹150</p>
+                        <p>Access to fun activities on Day 1 of the fest.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                  <div class="pass-card">
+                      <img src="assets/m4.jpg" class="img-fluid" alt="Fun Image 1">
+                      <h3>Competition Pass</h3>
+                      <p class="price">₹150</p>
+                      <p>Access to fun activities on Day 1 of the fest.</p>
+                  </div>
+              </div>
+              <div class="col-md-4 mb-4">
+                <div class="pass-card">
+                    <img src="assets/m4.jpg" class="img-fluid" alt="Fun Image 1">
+                    <h3>Competition Pass</h3>
+                    <p class="price">₹150</p>
+                    <p>Access to fun activities on Day 1 of the fest.</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+              <div class="pass-card">
+                  <img src="assets/m4.jpg" class="img-fluid" alt="Fun Image 1">
+                  <h3>Competition Pass</h3>
+                  <p class="price">₹150</p>
+                  <p>Access to fun activities on Day 1 of the fest.</p>
+              </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="pass-card">
+                <img src="assets/m4.jpg" class="img-fluid" alt="Fun Image 1">
+                <h3>Competition Pass</h3>
+                <p class="price">₹150</p>
+                <p>Access to fun activities on Day 1 of the fest.</p>
             </div>
         </div>
-    </nav>
-         <!-- Events Section -->
-    <section id="events" class="events-section py-5">
-        <div class="container" align = "center">
-            <h2 class="text-center text-light mb-4">Our Events</h2>
-            <div class="btn-group mb-4" role="group" aria-label="Event categories">
-                <button type="button" class="btn btn-outline-light" onclick="showSection('fun')">Fun</button>
-                <button type="button" class="btn btn-outline-light" onclick="showSection('projects')">Projects</button>
-                <button type="button" class="btn btn-outline-light" onclick="showSection('workshops')">Workshops</button>
-            </div>
-            <div id="fun" class="event-content">
-                <div class="row">
-                    <section id="passes" class="text-center py-5">
-                        <div class="container">
-                          <div class="row">
-                            <div class="col-md-4 mb-4">
-                              <div class="pass-card">
-                                <div class="col-md-4"><img src="assets/m4.jpg" class="img-fluid" alt="Fun Image 2"></div>
-                                <h3>Day 1 Pass</h3>
-                                <p class="price">₹150</p>
-                                <p>Access to fun activities and competitions happening on the first day of the fest.</p>
-                              </div>
-                            </div>
-                            <div class="col-md-4 mb-4">
-                              <div class="pass-card">
-                                <div class="col-md-4"><img src="assets/m5.jpg" class="img-fluid" alt="Fun Image 2"></div>
-                                <h3>Day 2 Pass</h3>
-                                <p class="price">₹350</p>
-                                <p>Attend workshops, project-building sessions, and more exciting events.</p>
-                              </div>
-                            </div>
-                            <div class="col-md-4 mb-4">
-                              <div class="pass-card">
-                                <div class="col-md-4"><img src="assets/m6.jpg" class="img-fluid" alt="Fun Image 2"></div>
-                                <h3>Day 3 Pass</h3>
-                                <p class="price">₹750</p>
-                                <p>Experience the main event: a musical concert by famous artists!</p>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </section>
+        <div class="col-md-4 mb-4">
+          <div class="pass-card">
+              <img src="assets/m4.jpg" class="img-fluid" alt="Fun Image 1">
+              <h3>Competition Pass</h3>
+              <p class="price">₹150</p>
+              <p>Access to fun activities on Day 1 of the fest.</p>
+          </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="pass-card">
+            <img src="assets/m4.jpg" class="img-fluid" alt="Fun Image 1">
+            <h3>Competition Pass</h3>
+            <p class="price">₹150</p>
+            <p>Access to fun activities on Day 1 of the fest.</p>
+        </div>
+    </div>
+    <div class="col-md-4 mb-4">
+      <div class="pass-card">
+          <img src="assets/m4.jpg" class="img-fluid" alt="Fun Image 1">
+          <h3>Competition Pass</h3>
+          <p class="price">₹150</p>
+          <p>Access to fun activities on Day 1 of the fest.</p>
+      </div>
+  </div>
+  <div class="col-md-4 mb-4">
+    <div class="pass-card">
+        <img src="assets/m4.jpg" class="img-fluid" alt="Fun Image 1">
+        <h3>Competition Pass</h3>
+        <p class="price">₹150</p>
+        <p>Access to fun activities on Day 1 of the fest.</p>
+    </div>
+</div>
+<div class="col-md-4 mb-4">
+  <div class="pass-card">
+      <img src="assets/m4.jpg" class="img-fluid" alt="Fun Image 1">
+      <h3>Competition Pass</h3>
+      <p class="price">₹150</p>
+      <p>Access to fun activities on Day 1 of the fest.</p>
+  </div>
+</div>
+<div class="col-md-4 mb-4">
+  <div class="pass-card">
+      <img src="assets/m4.jpg" class="img-fluid" alt="Fun Image 1">
+      <h3>Competition Pass</h3>
+      <p class="price">₹150</p>
+      <p>Access to fun activities on Day 1 of the fest.</p>
+  </div>
+</div>
+                        <!-- Repeat 9 More Cards -->
+                        <!-- Add More Cards Here -->
+                    </div>
                 </div>
-            </div>
 
-            <div id="projects" class="event-content d-none">
-                <div class="row">
-                    <section id="passes" class="text-center py-5">
-                        <div class="container">
-                          <div class="row">
-                            <div class="col-md-4 mb-4">
-                              <div class="pass-card">
-                                <div class="col-md-4"><img src="assets/m7.jpg" class="img-fluid" alt="Fun Image 2"></div>
-                                <h3>Day 1 Pass</h3>
-                                <p class="price">₹150</p>
-                                <p>Access to fun activities and competitions happening on the first day of the fest.</p>
-                              </div>
-                            </div>
-                            <div class="col-md-4 mb-4">
-                              <div class="pass-card">
-                                <div class="col-md-4"><img src="assets/m8.jpg" class="img-fluid" alt="Fun Image 2"></div>
-                                <h3>Day 2 Pass</h3>
+                <!-- Projects Section -->
+                <div id="projects" class="event-content d-none">
+                    <div class="row">
+                        <!-- Passes for Projects Section -->
+                        <div class="col-md-4 mb-4">
+                            <div class="pass-card">
+                                <img src="assets/m7.jpg" class="img-fluid" alt="Projects Image 1">
+                                <h3>Project Pass</h3>
                                 <p class="price">₹350</p>
-                                <p>Attend workshops, project-building sessions, and more exciting events.</p>
-                              </div>
+                                <p>Access to exciting projects on Day 2.</p>
                             </div>
-                            <div class="col-md-4 mb-4">
-                              <div class="pass-card">
-                                <div class="col-md-4"><img src="assets/m9.jpg" class="img-fluid" alt="Fun Image 2"></div>
-                                <h3>Day 3 Pass</h3>
-                                <p class="price">₹750</p>
-                                <p>Experience the main event: a musical concert by famous artists!</p>
-                              </div>
-                            </div>
-                          </div>
                         </div>
-                      </section>
+                        <div class="col-md-4 mb-4">
+                          <div class="pass-card">
+                              <img src="assets/m7.jpg" class="img-fluid" alt="Projects Image 1">
+                              <h3>Project Pass</h3>
+                              <p class="price">₹350</p>
+                              <p>Access to exciting projects on Day 2.</p>
+                          </div>
+                      </div>
+                      <div class="col-md-4 mb-4">
+                        <div class="pass-card">
+                            <img src="assets/m7.jpg" class="img-fluid" alt="Projects Image 1">
+                            <h3>Project Pass</h3>
+                            <p class="price">₹350</p>
+                            <p>Access to exciting projects on Day 2.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                      <div class="pass-card">
+                          <img src="assets/m7.jpg" class="img-fluid" alt="Projects Image 1">
+                          <h3>Project Pass</h3>
+                          <p class="price">₹350</p>
+                          <p>Access to exciting projects on Day 2.</p>
+                      </div>
+                  </div>
+                  <div class="col-md-4 mb-4">
+                    <div class="pass-card">
+                        <img src="assets/m7.jpg" class="img-fluid" alt="Projects Image 1">
+                        <h3>Project Pass</h3>
+                        <p class="price">₹350</p>
+                        <p>Access to exciting projects on Day 2.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                  <div class="pass-card">
+                      <img src="assets/m7.jpg" class="img-fluid" alt="Projects Image 1">
+                      <h3>Project Pass</h3>
+                      <p class="price">₹350</p>
+                      <p>Access to exciting projects on Day 2.</p>
+                  </div>
+              </div>
+              <div class="col-md-4 mb-4">
+                <div class="pass-card">
+                    <img src="assets/m7.jpg" class="img-fluid" alt="Projects Image 1">
+                    <h3>Project Pass</h3>
+                    <p class="price">₹350</p>
+                    <p>Access to exciting projects on Day 2.</p>
                 </div>
             </div>
+            <div class="col-md-4 mb-4">
+              <div class="pass-card">
+                  <img src="assets/m7.jpg" class="img-fluid" alt="Projects Image 1">
+                  <h3>Project Pass</h3>
+                  <p class="price">₹350</p>
+                  <p>Access to exciting projects on Day 2.</p>
+              </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="pass-card">
+                <img src="assets/m7.jpg" class="img-fluid" alt="Projects Image 1">
+                <h3>Project Pass</h3>
+                <p class="price">₹350</p>
+                <p>Access to exciting projects on Day 2.</p>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="pass-card">
+              <img src="assets/m7.jpg" class="img-fluid" alt="Projects Image 1">
+              <h3>Project Pass</h3>
+              <p class="price">₹350</p>
+              <p>Access to exciting projects on Day 2.</p>
+          </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="pass-card">
+            <img src="assets/m7.jpg" class="img-fluid" alt="Projects Image 1">
+            <h3>Project Pass</h3>
+            <p class="price">₹350</p>
+            <p>Access to exciting projects on Day 2.</p>
+        </div>
+    </div>
+    <div class="col-md-4 mb-4">
+      <div class="pass-card">
+          <img src="assets/m7.jpg" class="img-fluid" alt="Projects Image 1">
+          <h3>Project Pass</h3>
+          <p class="price">₹350</p>
+          <p>Access to exciting projects on Day 2.</p>
+      </div>
+  </div>
+  <div class="col-md-4 mb-4">
+    <div class="pass-card">
+        <img src="assets/m7.jpg" class="img-fluid" alt="Projects Image 1">
+        <h3>Project Pass</h3>
+        <p class="price">₹350</p>
+        <p>Access to exciting projects on Day 2.</p>
+    </div>
+</div>
+<div class="col-md-4 mb-4">
+  <div class="pass-card">
+      <img src="assets/m7.jpg" class="img-fluid" alt="Projects Image 1">
+      <h3>Project Pass</h3>
+      <p class="price">₹350</p>
+      <p>Access to exciting projects on Day 2.</p>
+  </div>
+</div>
+<div class="col-md-4 mb-4">
+  <div class="pass-card">
+      <img src="assets/m7.jpg" class="img-fluid" alt="Projects Image 1">
+      <h3>Project Pass</h3>
+      <p class="price">₹350</p>
+      <p>Access to exciting projects on Day 2.</p>
+  </div>
+</div>
+                        <!-- Repeat 9 More Cards -->
+                        <!-- Add More Cards Here -->
+                    </div>
+                </div>
 
-            <div id="workshops" class="event-content d-none">
-                <div class="row">
-                    <section id="passes" class="text-center py-5">
-                        <div class="container">
-                          <h2 class="mb-5">Choose Your Pass</h2>
-                          <div class="row">
-                            <div class="col-md-4 mb-4">
-                              <div class="pass-card">
-                                <div class="col-md-4"><img src="assets/m10.jpg" class="img-fluid" alt="Fun Image 2"></div>
-                                <h3>Day 1 Pass</h3>
-                                <p class="price">₹150</p>
-                                <p>Access to fun activities and competitions happening on the first day of the fest.</p>
-                              </div>
-                            </div>
-                            <div class="col-md-4 mb-4">
-                              <div class="pass-card">
-                                <div class="col-md-4"><img src="assets/m11.jpg" class="img-fluid" alt="Fun Image 2"></div>
-                                <h3>Day 2 Pass</h3>
-                                <p class="price">₹350</p>
-                                <p>Attend workshops, project-building sessions, and more exciting events.</p>
-                              </div>
-                            </div>
-                            <div class="col-md-4 mb-4">
-                              <div class="pass-card">
-                                <div class="col-md-4"><img src="assets/m12.jpg" class="img-fluid" alt="Fun Image 2"></div>
-                                <h3>Day 3 Pass</h3>
+                <!-- Workshops Section -->
+                <div id="workshops" class="event-content d-none">
+                    <div class="row">
+                        <!-- Passes for Workshops Section -->
+                        <div class="col-md-4 mb-4">
+                            <div class="pass-card">
+                                <img src="assets/m10.jpg" class="img-fluid" alt="Workshop Image 1">
+                                <h3>Workshop Pass</h3>
                                 <p class="price">₹750</p>
-                                <p>Experience the main event: a musical concert by famous artists!</p>
-                              </div>
+                                <p>Access to expert workshops on Day 3.</p>
                             </div>
-                          </div>
                         </div>
-                      </section>
+                        <div class="col-md-4 mb-4">
+                          <div class="pass-card">
+                              <img src="assets/m10.jpg" class="img-fluid" alt="Workshop Image 1">
+                              <h3>Workshop Pass</h3>
+                              <p class="price">₹750</p>
+                              <p>Access to expert workshops on Day 3.</p>
+                          </div>
+                      </div>
+                      <div class="col-md-4 mb-4">
+                        <div class="pass-card">
+                            <img src="assets/m10.jpg" class="img-fluid" alt="Workshop Image 1">
+                            <h3>Workshop Pass</h3>
+                            <p class="price">₹750</p>
+                            <p>Access to expert workshops on Day 3.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                      <div class="pass-card">
+                          <img src="assets/m10.jpg" class="img-fluid" alt="Workshop Image 1">
+                          <h3>Workshop Pass</h3>
+                          <p class="price">₹750</p>
+                          <p>Access to expert workshops on Day 3.</p>
+                      </div>
+                  </div>
+                  <div class="col-md-4 mb-4">
+                    <div class="pass-card">
+                        <img src="assets/m10.jpg" class="img-fluid" alt="Workshop Image 1">
+                        <h3>Workshop Pass</h3>
+                        <p class="price">₹750</p>
+                        <p>Access to expert workshops on Day 3.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                  <div class="pass-card">
+                      <img src="assets/m10.jpg" class="img-fluid" alt="Workshop Image 1">
+                      <h3>Workshop Pass</h3>
+                      <p class="price">₹750</p>
+                      <p>Access to expert workshops on Day 3.</p>
+                  </div>
+              </div>
+              <div class="col-md-4 mb-4">
+                <div class="pass-card">
+                    <img src="assets/m10.jpg" class="img-fluid" alt="Workshop Image 1">
+                    <h3>Workshop Pass</h3>
+                    <p class="price">₹750</p>
+                    <p>Access to expert workshops on Day 3.</p>
                 </div>
             </div>
+            <div class="col-md-4 mb-4">
+              <div class="pass-card">
+                  <img src="assets/m10.jpg" class="img-fluid" alt="Workshop Image 1">
+                  <h3>Workshop Pass</h3>
+                  <p class="price">₹750</p>
+                  <p>Access to expert workshops on Day 3.</p>
+              </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="pass-card">
+                <img src="assets/m10.jpg" class="img-fluid" alt="Workshop Image 1">
+                <h3>Workshop Pass</h3>
+                <p class="price">₹750</p>
+                <p>Access to expert workshops on Day 3.</p>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="pass-card">
+              <img src="assets/m10.jpg" class="img-fluid" alt="Workshop Image 1">
+              <h3>Workshop Pass</h3>
+              <p class="price">₹750</p>
+              <p>Access to expert workshops on Day 3.</p>
+          </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="pass-card">
+            <img src="assets/m10.jpg" class="img-fluid" alt="Workshop Image 1">
+            <h3>Workshop Pass</h3>
+            <p class="price">₹750</p>
+            <p>Access to expert workshops on Day 3.</p>
+        </div>
+    </div>
+    <div class="col-md-4 mb-4">
+      <div class="pass-card">
+          <img src="assets/m10.jpg" class="img-fluid" alt="Workshop Image 1">
+          <h3>Workshop Pass</h3>
+          <p class="price">₹750</p>
+          <p>Access to expert workshops on Day 3.</p>
+      </div>
+  </div>
+  <div class="col-md-4 mb-4">
+    <div class="pass-card">
+        <img src="assets/m10.jpg" class="img-fluid" alt="Workshop Image 1">
+        <h3>Workshop Pass</h3>
+        <p class="price">₹750</p>
+        <p>Access to expert workshops on Day 3.</p>
+    </div>
+</div>
+<div class="col-md-4 mb-4">
+  <div class="pass-card">
+      <img src="assets/m10.jpg" class="img-fluid" alt="Workshop Image 1">
+      <h3>Workshop Pass</h3>
+      <p class="price">₹750</p>
+      <p>Access to expert workshops on Day 3.</p>
+  </div>
+</div>
+<div class="col-md-4 mb-4">
+  <div class="pass-card">
+      <img src="assets/m10.jpg" class="img-fluid" alt="Workshop Image 1">
+      <h3>Workshop Pass</h3>
+      <p class="price">₹750</p>
+      <p>Access to expert workshops on Day 3.</p>
+  </div>
+</div>
+<div class="col-md-4 mb-4">
+  <div class="pass-card">
+      <img src="assets/m10.jpg" class="img-fluid" alt="Workshop Image 1">
+      <h3>Workshop Pass</h3>
+      <p class="price">₹750</p>
+      <p>Access to expert workshops on Day 3.</p>
+  </div>
+</div>
+                        <!-- Repeat 9 More Cards -->
+                        <!-- Add More Cards Here -->
+                    </div>
+                </div>
             </div>
         </section>
-    <!-- Footer Section -->
-<footer class="footer py-5">
-    <div class="container">
-        <div class="row text-center text-md-start">
-            <!-- About Section -->
-            <div class="col-md-4 mb-4">
-                <h5 class="text-uppercase">Aageneya 2024</h5>
-                <p>Join us for a grand celebration of technology and music at GEC Barton Hill. Don't miss the fun, workshops, competitions, and an unforgettable concert!</p>
-            </div>
 
-            <!-- Statistics -->
-            <div class="col-md-4 mb-4">
-                <h5 class="text-uppercase">Statistics</h5>
-                <ul class="list-unstyled">
-                    <li><strong>Registered Attendees:</strong> 500+</li>
-                    <li><strong>Visitors:</strong> 1500+</li>
-                    <li><strong>Events Hosted:</strong> 20+</li>
-                </ul>
-            </div>
-
-            <!-- Contact Info -->
-            <div class="col-md-4 mb-4">
-                <h5 class="text-uppercase">Contact Us</h5>
-                <ul class="list-unstyled">
-                    <li><strong>Email:</strong> info@aageneya.com</li>
-                    <li><strong>Phone:</strong> +91 98765 43210</li>
-                    <li><strong>Location:</strong> GEC Barton Hill, Trivandrum</li>
-                </ul>
-                <div class="social-icons mt-3">
-                    <a href="#" class="text-light me-3"><i class="bi bi-facebook"></i></a>
-                    <a href="#" class="text-light me-3"><i class="bi bi-twitter"></i></a>
-                    <a href="#" class="text-light me-3"><i class="bi bi-instagram"></i></a>
-                    <a href="#" class="text-light"><i class="bi bi-linkedin"></i></a>
+        <!-- Footer Section -->
+        <footer class="footer py-5">
+            <div class="container">
+                <div class="row text-center text-md-start">
+                    <!-- About Section -->
+                    <div class="col-md-4 mb-4">
+                        <h5 class="text-uppercase">Aageneya 2024</h5>
+                        <p>Join us for a grand celebration of technology and music at GEC Barton Hill!</p>
+                    </div>
+                    <!-- Statistics -->
+                    <div class="col-md-4 mb-4">
+                        <h5 class="text-uppercase">Statistics</h5>
+                        <ul class="list-unstyled">
+                            <li><strong>Registered Attendees:</strong> 500+</li>
+                            <li><strong>Visitors:</strong> 1500+</li>
+                            <li><strong>Events Hosted:</strong> 20+</li>
+                        </ul>
+                    </div>
+                    <!-- Contact Info -->
+                    <div class="col-md-4 mb-4">
+                        <h5 class="text-uppercase">Contact Us</h5>
+                        <ul class="list-unstyled">
+                            <li><strong>Email:</strong> info@aageneya.com</li>
+                            <li><strong>Phone:</strong> +91 98765 43210</li>
+                            <li><strong>Location:</strong> GEC Barton Hill, Trivandrum</li>
+                        </ul>
+                        <div class="social-icons mt-3">
+                            <a href="#" class="text-light me-3"><i class="bi bi-facebook"></i></a>
+                            <a href="#" class="text-light me-3"><i class="bi bi-twitter"></i></a>
+                            <a href="#" class="text-light me-3"><i class="bi bi-instagram"></i></a>
+                            <a href="#" class="text-light"><i class="bi bi-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <hr class="my-4 border-light">
+                <div class="text-center">
+                    <p class="mb-0">&copy; 2024 Aageneya. All Rights Reserved.</p>
                 </div>
             </div>
-        </div>
-        <hr class="my-4 border-light">
-        <div class="text-center">
-            <p class="mb-0">&copy; 2024 Aageneya. All Rights Reserved.</p>
-        </div>
+        </footer>
     </div>
-</footer>
-    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="g.js"></script>
+    <script src="js/g.js"></script>
 </body>
 </html>

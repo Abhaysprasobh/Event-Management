@@ -103,11 +103,10 @@ body {
 }
 
 .event-content img {
-    width: 100%;
-    padding: 10vh;
+    width: 50%;
     margin-bottom: 15px;
     border: 1vh solid rgba(255, 255, 255, 0.267);
-    border-radius: 25% 50%;
+    border-radius: 5vh;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.356);
     filter: blur(0.25px);
     transition: 1s;
