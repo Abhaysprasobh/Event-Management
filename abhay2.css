@@ -106,6 +106,7 @@ body {
 
 .login-form .form-control {
     border-radius: 8px;
+    margin-left: 10px;
     background-color: #4444443a;
     border: 1px solid #555;
     color: #fff;
@@ -141,5 +142,5 @@ margin-top: 1vh;
 #reglnk{
     text-decoration: none;
     font-size: large;
-    color: green;
+    color: red;
 }
