@@ -26,11 +26,38 @@ const timer = setInterval(countdown, 1000);
 
 // Show section based on button click
 function showSection(section) {
-    const sections = document.querySelectorAll('.event-content');
-    sections.forEach(sec => sec.classList.add('d-none'));
-    
-    document.getElementById(section).classList.remove('d-none');
+    const currentSection = document.querySelector('.event-content:not(.d-none)');
+    const newSection = document.getElementById(section);
+
+    // Step 1: Flip all images in the current section
+    const currentImages = currentSection.querySelectorAll('.flip-image');
+    currentImages.forEach(image => {
+        image.classList.add('flip');
+    });
+
+    // Step 2: After the flip completes (800ms), hide the current section and show the new section
+    setTimeout(() => {
+        currentSection.classList.add('d-none'); // Hide current section
+        currentImages.forEach(image => {
+            image.classList.remove('flip'); // Reset flip for next time
+        });
+
+        // Step 3: Flip new section's images into view
+        newSection.classList.remove('d-none'); // Show new section
+        const newImages = newSection.querySelectorAll('.flip-image');
+        newImages.forEach(image => {
+            image.classList.add('flip'); // Flip into view
+        });
+
+        // Remove the flip after the animation
+        setTimeout(() => {
+            newImages.forEach(image => {
+                image.classList.remove('flip'); // Reset after animation
+            });
+        }, 400); // 800ms to match the flip animation duration
+    }, 800); // Allow 800ms for the flip to complete
 }
+
 
 // cubes
 document.addEventListener('DOMContentLoaded', () => {
@@ -47,4 +74,22 @@ document.addEventListener('DOMContentLoaded', () => {
         cube.classList.add('cube');
         cubesContainer.appendChild(cube);
     }
+});
+
+window.addEventListener('load', function() {
+    const preloader = document.querySelector('.preloader');
+    const counter = document.querySelector('.counter');
+    let count = 0;
+
+    let counterInterval = setInterval(() => {
+        if (count < 100) {
+            count++;
+            counter.textContent = count + "%";
+        } else {
+            clearInterval(counterInterval);
+        }
+    }, 20); 
+    setTimeout(() => {
+        preloader.classList.add('hidden');
+    }, 3500);
 });

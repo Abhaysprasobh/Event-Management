@@ -105,8 +105,7 @@ body {
     background-size: cover;
     background-position: center;
     position: relative;
-    border-radius: 5vw;
-    left: 0;
+    z-index: 1000;
 }
 
 .hero-section::before {
@@ -131,11 +130,7 @@ body {
     color: #ff3c41;
 }
 
-/* Events section */
-.events-section .btn-group .btn {
-    margin: 0 10px;
-}
-
+/* Basic image styles */
 .event-content img {
     width: 60%;
     margin-bottom: 15px;
@@ -144,6 +139,7 @@ body {
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.356);
     filter: blur(0.25px);
     transition: 1s;
+    transform-style: preserve-3d; /* Enable 3D rotation */
 }
 
 .event-content img:hover {
@@ -153,10 +149,18 @@ body {
     transition: 1s;
 }
 
-.event-content a{
-    text-align: center;
+/* Flip animation */
+.flip-image {
+    transition: transform 1s ease-in-out; /* Smooth flip */
+    transform-origin: center; /* Flip from center */
 }
 
+/* Flip effect on click */
+.flip-image.flip {
+    transform: rotateY(90deg); /* Rotate by 180 degrees */
+}
+
+/* Hides elements */
 .d-none {
     display: none;
 }
@@ -357,6 +361,87 @@ body {
 
 .footer .social-icons a:hover {
     filter: drop-shadow( 0 0 10px #ff3c41);
+}
+
+/* Preloader wrapper */
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+/* Spinner (circle) */
+.preloader .spinner {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    border: 5px solid rgba(255, 0, 0, 0.3);
+    border-top: 5px solid rgba(255, 0, 0, 1);
+    border-radius: 50%;
+    animation: spin 1.5s linear infinite;
+    margin-bottom: 20px;
+}
+
+/* Inner glow effect */
+.preloader .spinner::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    border-radius: 50%;
+    border: 5px solid rgba(255, 0, 0, 0.5);
+    animation: pulsate 1.5s ease-in-out infinite;
+}
+
+/* Counter styling */
+.preloader .counter {
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
+}
+
+/* Spin animation for the circle */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Pulsating inner circle animation */
+@keyframes pulsate {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Hides the preloader when the page is loaded */
+.hidden {
+    opacity: 0;
+    visibility: hidden;
 }
 
 /* Responsive Design */

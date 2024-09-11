@@ -10,6 +10,45 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+    <div class="preloader">
+        <div class="spinner"></div>
+        <div class="counter">0%</div>
+    </div>
+     
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-transparent">
+            <div class="container">
+                <a class="navbar-brand" href="#">Aageneya</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#events">Events</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#passes">Passes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="login.html">Login/Registration</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    
+        <!-- Hero Section -->
+        <section class="hero-section text-center text-light d-flex justify-content-center align-items-center">
+            <div class="container">
+                <h1 class="display-3">Aageneya 2024</h1>
+                <p class="lead">A Tech & Music Extravaganza by GEC Barton Hill</p>
+                <div id="countdown" class="countdown"></div>
+            </div>
+        </section>
     <div class="container">
         <div class="background-effects">
             <div class="cubes-container">
@@ -17,79 +56,50 @@
                 <div class="wave"></div>
             </div>
         </div>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-transparent">
-        <div class="container">
-            <a class="navbar-brand" href="#">Aageneya</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#events">Events</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#passes">Passes</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="login.html">Login/Registration</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="hero-section text-center text-light d-flex justify-content-center align-items-center">
-        <div class="container">
-            <h1 class="display-3">Aageneya 2024</h1>
-            <p class="lead">A Tech & Music Extravaganza by GEC Barton Hill</p>
-            <div id="countdown" class="countdown"></div>
-        </div>
-    </section>
-
-    <!-- Events Section -->
-    <section id="events" class="events-section py-5">
-        <div class="container" align = "center">
-            <h2 class="text-center text-light mb-4">Our Events</h2>
-            <div class="btn-group mb-4" role="group" aria-label="Event categories">
-                <button type="button" class="btn btn-outline-light" onclick="showSection('fun')">Fun</button>
-                <button type="button" class="btn btn-outline-light" onclick="showSection('projects')">Projects</button>
-                <button type="button" class="btn btn-outline-light" onclick="showSection('workshops')">Workshops</button>
-            </div>
-            
-            <div id="fun" class="event-content">
-                <div class="row">
-                    <div class="col-md-4"><img src="assets/m4.jpg" class="img-fluid" alt="Fun Image 1"></div>
-                    <div class="col-md-4"><img src="assets/m5.jpg" class="img-fluid" alt="Fun Image 2"></div>
-                    <div class="col-md-4"><img src="assets/m6.jpg" class="img-fluid" alt="Fun Image 3"></div>
+        <!-- Hero Section -->
+        <section id="events" class="events-section py-5">
+            <div class="container" align="center">
+                <h2 class="text-center text-light mb-4">Our Events</h2>
+        
+                <!-- Event category buttons -->
+                <div class="btn-group mb-4" role="group" aria-label="Event categories">
+                    <button type="button" class="btn btn-outline-light" onclick="showSection('fun')">Fun</button>
+                    <button type="button" class="btn btn-outline-light" onclick="showSection('projects')">Projects</button>
+                    <button type="button" class="btn btn-outline-light" onclick="showSection('workshops')">Workshops</button>
                 </div>
-                <a href="gallery.html" class="btn btn-outline-light mt-3">More Fun Events</a>
-            </div>
-
-            <div id="projects" class="event-content d-none">
-                <div class="row">
-                    <div class="col-md-4"><img src="assets/m7.jpg" class="img-fluid" alt="Projects Image 1"></div>
-                    <div class="col-md-4"><img src="assets/m8.jpg" class="img-fluid" alt="Projects Image 2"></div>
-                    <div class="col-md-4"><img src="assets/m9.jpg" class="img-fluid" alt="Projects Image 3"></div>
+        
+                <!-- Fun section (displayed by default) -->
+                <div id="fun" class="event-content">
+                    <div class="row">
+                        <div class="col-md-4"><img src="assets/m4.jpg" class="img-fluid flip-image" alt="Fun Image 1"></div>
+                        <div class="col-md-4"><img src="assets/m5.jpg" class="img-fluid flip-image" alt="Fun Image 2"></div>
+                        <div class="col-md-4"><img src="assets/m6.jpg" class="img-fluid flip-image" alt="Fun Image 3"></div>
+                    </div>
+                    <a href="gallery.html" class="btn btn-outline-light mt-3">More Fun Events</a>
                 </div>
-                <a href="gallery.html" class="btn btn-outline-light mt-3">More Project Events</a>
-            </div>
-
-            <div id="workshops" class="event-content d-none">
-                <div class="row">
-                    <div class="col-md-4"><img src="assets/m10.jpg" class="img-fluid" alt="Workshops Image 1"></div>
-                    <div class="col-md-4"><img src="assets/m11.jpg" class="img-fluid" alt="Workshops Image 2"></div>
-                    <div class="col-md-4"><img src="assets/m12.jpg" class="img-fluid" alt="Workshops Image 3"></div>
+        
+                <!-- Projects section (hidden by default) -->
+                <div id="projects" class="event-content d-none">
+                    <div class="row">
+                        <div class="col-md-4"><img src="assets/m7.jpg" class="img-fluid flip-image" alt="Projects Image 1"></div>
+                        <div class="col-md-4"><img src="assets/m8.jpg" class="img-fluid flip-image" alt="Projects Image 2"></div>
+                        <div class="col-md-4"><img src="assets/m9.jpg" class="img-fluid flip-image" alt="Projects Image 3"></div>
+                    </div>
+                    <a href="gallery.html" class="btn btn-outline-light mt-3">More Project Events</a>
                 </div>
-                <a href="gallery.html" class="btn btn-outline-light mt-3">More Workshop Events</a>
+        
+                <!-- Workshops section (hidden by default) -->
+                <div id="workshops" class="event-content d-none">
+                    <div class="row">
+                        <div class="col-md-4"><img src="assets/m10.jpg" class="img-fluid flip-image" alt="Workshops Image 1"></div>
+                        <div class="col-md-4"><img src="assets/m11.jpg" class="img-fluid flip-image" alt="Workshops Image 2"></div>
+                        <div class="col-md-4"><img src="assets/m12.jpg" class="img-fluid flip-image" alt="Workshops Image 3"></div>
+                    </div>
+                    <a href="gallery.html" class="btn btn-outline-light mt-3">More Workshop Events</a>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+        
 
 <!-- Agenda Section -->
 <section id="agenda" class="agenda-section py-5">
