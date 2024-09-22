@@ -15,3 +15,40 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+
+const passwordInput = document.getElementById('password');
+const confirmPasswordInput = document.getElementById('confirmPassword');
+const confirmMessage = document.getElementById('confirmMessage');
+const passwordStrengthText = document.getElementById('passwordStrength');
+
+// Check password strength
+passwordInput.addEventListener('input', function() {
+    const password = passwordInput.value;
+    let strength = 'Weak';
+    let valid = true;
+
+    // Password strength checks
+    if (password.length >= 8) {
+        strength = 'Medium';
+        if (/[A-Z]/.test(password) && /[0-9]/.test(password) && /[!@#$%^&*]/.test(password)) {
+            strength = 'Strong';
+        }
+    } else {
+        valid = false;
+    }
+
+    // Display password strength
+    passwordStrengthText.textContent = `Strength: ${strength}`;
+    passwordStrengthText.className = 'strength-status ' + (valid && strength === 'Strong' ? 'valid' : '');
+});
+
+// Confirm password match
+confirmPasswordInput.addEventListener('input', function() {
+    if (confirmPasswordInput.value === passwordInput.value) {
+        confirmMessage.textContent = '✔️ Passwords match';
+        confirmMessage.style.color = 'green';
+    } else {
+        confirmMessage.textContent = '❌ Passwords do not match';
+        confirmMessage.style.color = 'red';
+    }
+});
