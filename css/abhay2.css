@@ -144,3 +144,97 @@ margin-top: 1vh;
     font-size: large;
     color: red;
 }
+
+@media (max-width: 768px) {
+
+
+
+}
+
+.registration-form {
+
+    position: absolute;
+    top: 30%;
+    left: 30%;
+
+    background-color: #3333335b;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+    width: 70%;
+    max-width: 500px;
+}
+
+.registration-form h2 {
+    margin-bottom: 1.5rem;
+    color: #e74c3c;
+    text-align: center;
+}
+
+.registration-form .form-control {
+    border-radius: 8px;
+    background-color: #4444443a;
+    border: 1px solid #555;
+    color: #fff;
+}
+
+.registration-form .form-control:focus {
+    border-color: #e74c3c;
+    box-shadow: none;
+}
+
+.registration-form .btn-primary {
+    background-color: #e74c3c;
+    border: none;
+    border-radius: 8px;
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+.registration-form .btn-primary:hover {
+    background-color: #c0392b;
+}
+
+.registration-form .form-group {
+    margin-bottom: 1.5rem; /* Added spacing between form groups */
+}
+
+.registration-form .form-control {
+    border-radius: 8px;
+    background-color: #4444443a;
+    border: 1px solid #555;
+    color: #fff;
+    padding: 0.5rem; /* Padding inside text fields */
+}
+
+.registration-form .btn-primary {
+    background-color: #e74c3c;
+    border: none;
+    border-radius: 8px;
+    padding: 0.5rem 1rem; /* Increased padding for buttons */
+    font-size: 1rem;
+}
+
+.registration-form label {
+    margin-bottom: 0.5rem; /* Space below labels */
+    display: block; /* Make labels block elements for better spacing */
+}
+
+fieldset {
+    border-radius: 10px;
+    margin-bottom: 1.5rem; /* Space below fieldsets */
+}
+
+legend {
+    font-weight: bold;
+    margin-bottom: 0.5rem; /* Space below legend */
+}
+
+.strength-status {
+    font-size: 0.9em;
+    color: #dc3545; /* Red for errors */
+}
+.strength-status.valid {
+    color: #28a745; /* Green for valid */
+}
