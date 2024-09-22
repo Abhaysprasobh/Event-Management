@@ -238,3 +238,7 @@ legend {
 .strength-status.valid {
     color: #28a745; /* Green for valid */
 }
+
+#idCard{
+    outline: none;
+}
