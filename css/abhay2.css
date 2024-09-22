@@ -239,6 +239,6 @@ legend {
     color: #28a745; /* Green for valid */
 }
 
-#idCard{
+.form-control #idCard{
     outline: none;
 }
