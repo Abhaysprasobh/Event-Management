@@ -100,12 +100,16 @@ body {
 /* Hero section */
 .hero-section {
     height: 100vh;
-    width: 100vw;
-    background-image: url('assets/m3.1.jpg');
+    width: 80vw;
+    background-image: url('assets/m3..jpg');
+    filter: brightness(80%);
+    filter: opacity(0.8);
     background-size: cover;
     background-position: center;
     position: relative;
     z-index: 100;
+    left: 10vw;
+    border-radius: 2vh;
 }
 
 .hero-section::before {
@@ -263,8 +267,14 @@ body {
     letter-spacing: 2px;
   }
   
-  .pass-card {
+.day1{
     background-color: rgba(255, 255, 255, 0.1);
+}
+
+  .pass-card {
+    background-image: url(assets/day\ 1.jpg);
+    background-size: cover;
+    opacity: 0.9;
     padding: 30px;
     border-radius: 15px;
     transition: all 1s ease-in-out;
@@ -272,12 +282,14 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.1);
     position: relative;
     overflow: hidden;
-    height: 60vh;
-    width: 20vw;
+    height: 80vh;
+    width: 15vw;
+
   }
   
   .pass-card h3 {
     margin-bottom: 20px;
+    opacity: 0;
     font-size: 28px;
     text-transform: uppercase;
     color: #ff3b3b;
@@ -285,16 +297,22 @@ body {
   }
   
   .pass-card p {
+    opacity: 0;
     margin: 10px 0;
     font-size: 18px;
   }
   
   .price {
+    opacity: 0;
     font-size: 22px;
     font-weight: bold;
     color: #ff3b3b;
     margin-bottom: 10px;
   }
+
+    .pass-card h3:hover , .pass-card p:hover, .price:hover {
+        opacity: 1;
+    }
   
   .pass-card::before {
     content: '';
@@ -318,6 +336,7 @@ body {
     backdrop-filter: blur(10px);
     transform: translateY(-10px);
     transition: 1s;
+    opacity: 1;
   }
   
   .pass-card:hover h3, .pass-card:hover .price {
