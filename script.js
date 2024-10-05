@@ -1,3 +1,14 @@
+document.addEventListener('scroll', function() {
+    const layers = document.querySelectorAll('.parallax-layer');
+    const scrollPosition = window.scrollY;
+
+    layers.forEach(layer => {
+        const speed = layer.getAttribute('data-speed');
+        const yPos = scrollPosition * speed;
+        layer.style.transform = `translateY(${yPos}px)`;
+    });
+});
+
 // Countdown Timer
 const countdown = () => {
     const eventDate = new Date("Dec 10, 2024 09:00:00").getTime();
