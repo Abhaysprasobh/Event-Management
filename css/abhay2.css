@@ -94,13 +94,17 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     z-index: 1;
     width: 60%;
-    height: 30vh;
+    height: 35vh;
     max-width: 300px;
 }
 
 .login-form h2 {
     margin-bottom: 1.5rem;
     color: #e74c3c;
+    text-align: center;
+}
+
+.login-form p{
     text-align: center;
 }
 
@@ -152,11 +156,9 @@ margin-top: 1vh;
 }
 
 .registration-form {
-
     position: absolute;
     top: 30%;
     left: 30%;
-
     background-color: #3333335b;
     padding: 2rem;
     border-radius: 15px;
@@ -198,6 +200,7 @@ margin-top: 1vh;
 
 .registration-form .form-group {
     margin-bottom: 1.5rem; /* Added spacing between form groups */
+    display: flex;
 }
 
 .registration-form .form-control {
@@ -242,3 +245,21 @@ legend {
 .form-control #idCard{
     outline: none;
 }
+
+.file-label {
+    display: inline-block;
+    padding: 1vh 2vh;
+    background-color: #c61e1e;
+    color: white;
+    border-radius: 0.5vh;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  .file-label i {
+    margin-right: 0.75vh;
+  }
+  
+  .file-label:hover {
+    background-color: #8a2020;
+  }

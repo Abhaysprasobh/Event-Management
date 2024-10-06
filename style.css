@@ -100,52 +100,34 @@ body {
 
 #parallax-wrapper {
     position: relative;
-    height: 100vh;
+    top: -10vw;
+    left: 10vw;
+    width: 64vw;
+    height: 64vw;
     overflow: hidden;
     perspective: 1px;
-    transform-style: preserve-3d;
-}
-
-.parallax-layer {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transform: translateZ(0);
-    transition: transform 0.1s ease-out;
+    filter: brightness(80%);
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.491);
+    border: 2vh rgba(255, 255, 255, 0.174);
+    border-radius: 1vh;
 }
 
 .layer-back {
     z-index: 1;
-    transform: translateZ(-1px);
-    mix-blend-mode: screen;
-}
-
-.layer-middle {
-    z-index: 2;
-    transform: translateZ(-0.5px);
-    mix-blend-mode: screen;
-}
-
-.layer-foreground {
-    z-index: 3;
-    transform: translateZ(0);
-    mix-blend-mode: screen;
+    transform: translateY(0px);
 }
 
 /* Hero section */
 .hero-section {
     height: 100vh;
-    width: 80vw;
-    background-image: url('assets/m3..jpg');
+    width: 100vw;
+    background-image: url('assets/parallax_section_3.png');
     filter: brightness(80%);
     filter: opacity(0.8);
     background-size: cover;
     background-position: center;
     position: relative;
     z-index: 100;
-    left: 10vw;
     border-radius: 2vh;
 }
 
@@ -286,9 +268,9 @@ body {
 /* passes */
 
 #passes {
-    background-color: #111;
     color: white;
     padding: 50px 0;
+    position: relative;
   }
   
   .rows{
@@ -318,9 +300,9 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     border: 1px solid rgba(255, 255, 255, 0.1);
     position: relative;
-    overflow: hidden;
     height: 80vh;
     width: 15vw;
+    overflow: auto;
   }
   
   .pass-card h3 {
@@ -347,7 +329,7 @@ body {
   }
 
     .pass-card h3:hover , .pass-card p:hover, .price:hover {
-        opacity: 1;
+        opacity: 0;
     }
   
   .pass-card::before {

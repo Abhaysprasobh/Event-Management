@@ -5,7 +5,7 @@ document.addEventListener('scroll', function() {
     layers.forEach(layer => {
         const speed = layer.getAttribute('data-speed');
         const yPos = scrollPosition * speed;
-        layer.style.transform = `translateY(${yPos}px)`;
+        layer.style.transform = `translateY(${yPos}vh)`;
     });
 });
 
