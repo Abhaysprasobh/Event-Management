@@ -115,6 +115,7 @@ body {
 .layer-back {
     z-index: 1;
     transform: translateY(0px);
+    transition: transform 0.1s ease-out;
 }
 
 /* Hero section */
