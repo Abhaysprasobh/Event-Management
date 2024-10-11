@@ -108,13 +108,13 @@ body {
     perspective: 1px;
     filter: brightness(80%);
     box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.491);
-    border: 2vh rgba(255, 255, 255, 0.174);
+    border: 2vh rgba(255, 255, 255, 0.116);
     border-radius: 1vh;
 }
 
 .layer-back {
     z-index: 1;
-    transform: translateY(0px);
+    transform: translateY(0vh);
     transition: transform 0.1s ease-out;
 }
 
@@ -493,6 +493,14 @@ body {
     .hero-section {
         height: 100vh;
         background-position: top;
+        opacity: 1;
+    }
+
+    #parallax-wrapper{
+        height: 80vh;
+        width: 100vw;
+        background-position: top;
+        opacity: 1;
     }
 
     .hero-section h1 {

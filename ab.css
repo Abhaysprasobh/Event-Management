@@ -23,7 +23,10 @@ body{
   
   .about-section {
     padding: 80px 0;
-    background:url(/assets/parallax_section_1.png);
+    background:url(assets/parallax_section_3.png);
+    backdrop-filter: brightness(80%);
+    backdrop-filter: opacity();
+    background-size: cover;
     color: #fff;
     text-align: center;
     scroll-behavior: smooth;
