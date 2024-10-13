@@ -1,16 +1,32 @@
 const express = require('express');
+const mongoose = require('mongoose');
 const app = express();
 const path = require("path");
-const port = 3000 | process.env.port;
-require("dotenv").config();
+const port = 3000 || process.env.port;
 
+require("dotenv").config();
 app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname, "public")));
 
-// Consolidate routes for the home page
+
+
+const db_url = process.env.DB_URL || "mongodb://127.0.0.1:27017/event_management";
+
+// mongoose.connect
+
+app.listen(port, () => {
+    console.log(`Server is running at http://localhost:${port}`);
+});
+
+
+
+
+
 const renderIndex = (req, res) => {
     res.render("index");
 };
+
+
 
 app.get("/", renderIndex);
 app.get("/index", renderIndex);
@@ -50,6 +66,3 @@ app.use((req, res) => {
     res.status(404).render("404");
 });
 
-app.listen(port, () => {
-    console.log(`Server is running at http://localhost:${port}`);
-});
