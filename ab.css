@@ -33,13 +33,13 @@ body{
   }
   
   .section-title {
-    font-size: 36px;
+    font-size: 2.25rem;
     margin-bottom: 20px;
   }
   
   .section-description {
     position: relative;
-    font-size: 18px;
+    font-size: 1.125rem;
     margin-bottom: 40px;
 
   }
@@ -99,7 +99,7 @@ body{
   .social-icons a {
     color: #fff;
     margin: 5px;
-    font-size: 24px;  /* Increased size for better visibility */
+    font-size: 1.5; 
     transition: color 0.3s ease;
   }
   
@@ -108,7 +108,7 @@ body{
   }
   
   .member-role {
-    font-size: 16px;
+    font-size: 1rem;
     margin-top: 10px;
   }
   
@@ -183,4 +183,13 @@ body{
     100% {
         transform: rotateY(360deg);
     }
+}
+
+@media (max-width: 768px) {
+  .team-member {
+    position: relative;
+    width: 80vw;
+    margin: 2vw;
+  }
+
 }
