@@ -541,4 +541,24 @@ body {
         width: 60vw;
         margin-left: 13vw;
       }
+
+      #parallax-wrapper {
+        position: relative;
+        top: -35vw;
+        left: 0;
+        width: 64vw;
+        height: 64vw;
+        overflow: hidden;
+        perspective: 1px;
+        filter: brightness(80%);
+        box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.491);
+        border: 2vh rgba(255, 255, 255, 0.116);
+        border-radius: 1vh;
+    }
+    
+    .layer-back {
+        z-index: 1;
+        transform: translateY(0vh);
+        transition: transform 0.1s ease-out;
+    }
 }
