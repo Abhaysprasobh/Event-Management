@@ -547,7 +547,7 @@ body {
         top: -35vw;
         left: -5vw;
         width: 100vw;
-        height: 100vh;
+        height: 200vh;
         overflow: hidden;
         perspective: 1px;
         filter: brightness(80%);
