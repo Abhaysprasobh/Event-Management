@@ -23,7 +23,7 @@ body{
   
   .about-section {
     padding: 80px 0;
-    background:url(assets/parallax_section_3.png);
+    background-color: #000000e4;
     backdrop-filter: brightness(80%);
     backdrop-filter: opacity();
     background-size: cover;
@@ -61,6 +61,7 @@ body{
   
   .team-img {
     width: 100%;
+    background-color: #ff9a9d6c;
     border-radius: 2vh;
     box-shadow: 2px 4xp 10px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s ease;
