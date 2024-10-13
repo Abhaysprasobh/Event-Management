@@ -121,25 +121,5 @@
             </button>
         </div>
     </div>
-
-    <script>
-        // Populate profile page with registration data from localStorage
-        document.getElementById('firstNameInfo').textContent = localStorage.getItem('firstName') || 'John';
-        document.getElementById('lastNameInfo').textContent = localStorage.getItem('lastName') || 'Doe';
-        document.getElementById('emailInfo').textContent = localStorage.getItem('email') || 'johndoe@example.com';
-        document.getElementById('collegeNameInfo').textContent = localStorage.getItem('collegeName') || 'ABC College';
-        document.getElementById('yearInfo').textContent = localStorage.getItem('year') || '3rd';
-        document.getElementById('departmentInfo').textContent = localStorage.getItem('department') || 'Computer Science';
-
-        // Profile picture simulation
-        const imageFile = localStorage.getItem('profilePic');
-        document.getElementById('profilePic').src = imageFile || 'https://via.placeholder.com/150';
-        document.getElementById('profileName').textContent = `${localStorage.getItem('firstName') || 'John'} ${localStorage.getItem('lastName') || 'Doe'}`;
-
-        // Go back button functionality
-        function goBack() {
-            window.history.back();
-        }
-    </script>
 </body>
 </html>
