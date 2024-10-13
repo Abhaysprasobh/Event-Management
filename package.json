@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Abhaysprasobh/Event-Management#readme",
   "devDependencies": {
+    "ejs": "^3.1.10",
     "express": "^4.21.1",
     "nodemon": "^3.1.7"
   }
