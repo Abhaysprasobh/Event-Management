@@ -83,10 +83,10 @@ body {
     }
 }
 
-
 .navbar-brand {
     font-size: 1.8rem;
     font-weight: bold;
+    mix-blend-mode: screen;;
 }
 
 .nav-link {
@@ -303,9 +303,9 @@ body {
     position: relative;
     height: 80vh;
     width: 15vw;
-    overflow: auto;
+    overflow: hidden;
   }
-  
+
   .pass-card h3 {
     margin-bottom: 20px;
     opacity: 0;

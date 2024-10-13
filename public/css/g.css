@@ -87,6 +87,7 @@ body {
 .navbar-brand {
     font-size: 1.8rem;
     font-weight: bold;
+    backdrop-filter: blur(10px);
 }
 
 .nav-link {
@@ -142,7 +143,7 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     border: 1px solid rgba(255, 255, 255, 0.1);
     position: relative;
-    overflow: hidden;
+    overflow-x: hidden;
     height: 60vh;
     width: 20vw;
   }
@@ -158,6 +159,14 @@ body {
   .pass-card p {
     margin: 10px 0;
     font-size: 18px;
+  }
+
+  .pass-card ::-webkit-scrollbar-y{
+    display: none;
+  }
+
+  .pass-card::before ::-webkit-scrollbar-y{
+    display: none;
   }
   
   .price {

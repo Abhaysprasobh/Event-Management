@@ -1,43 +1,54 @@
 const express = require('express');
 const app = express();
-const path = require("path")
+const path = require("path");
 const port = 3000;
 
-app.set("view-engine", "ejs");
+app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname, "public")));
 
-app.listen(3000, () => {
-    console.log('Server is running http://localhost:'+port);
+// Consolidate routes for the home page
+const renderIndex = (req, res) => {
+    res.render("index");
+};
+
+app.get("/", renderIndex);
+app.get("/index", renderIndex);
+app.get("/home", renderIndex);
+
+// About page
+app.get("/about", (req, res) => {
+    res.render("about");
 });
 
-app.get("/", (req, res) => {
-    res.sendFile("./views/index.html", { root: __dirname });
-});
-app.get("/index", (req, res) => {
-    res.sendFile("./views/index.html", { root: __dirname });
-});
-app.get("/home", (req, res) => {
-    res.sendFile("./views/index.html", { root: __dirname });
-});
-app.get("/about", (req, res) => {
-    res.sendFile("./views/about.html", { root: __dirname });
-});
+// Redirect to about
 app.get("/about-us", (req, res) => {
     res.redirect('/about');
 });
+
+// Gallery page
 app.get("/gallery", (req, res) => {
-    res.sendFile("./views/gallery.html", { root: __dirname });
-});
-app.get("/register", (req, res) => {
-    res.sendFile("./views/register.html", { root: __dirname });
-});
-app.get("/login", (req, res) => {
-    res.sendFile("./views/login.html", { root: __dirname });
-});
-app.get("/agenda", (req, res) => {
-    res.sendFile("./views/agenda.html", { root: __dirname });
-});
-app.use((req, res) => {
-    res.status(404).sendFile("./views/404.html", { root: __dirname });
+    res.render("gallery");
 });
 
+// Registration and Login pages
+app.get("/register", (req, res) => {
+    res.render("register");
+});
+
+app.get("/login", (req, res) => {
+    res.render("login");
+});
+
+// Agenda page
+app.get("/agenda", (req, res) => {
+    res.render("agenda");
+});
+
+// Handle 404
+app.use((req, res) => {
+    res.status(404).render("404");
+});
+
+app.listen(port, () => {
+    console.log(`Server is running at http://localhost:${port}`);
+});

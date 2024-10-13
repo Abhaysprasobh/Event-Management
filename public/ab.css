@@ -1,66 +1,78 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 
-body{
-    font-style: Outfit;
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: #0d0d0d; /* Dark background */
     padding: 0;
     margin: 0;
-  }
+    color: #fff;
+}
 
-  .navbar-brand {
+.navbar {
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 0, 0, 0.2);
+}
+
+.navbar-brand {
     font-size: 1.8rem;
     font-weight: bold;
+    color: #ff3c41;
 }
 
 .nav-link {
     color: #fff;
-    backdrop-filter: blur(10px);
+    transition: color 0.3s ease;
 }
 
 .nav-link:hover {
     color: #ff3c41;
+    text-shadow: 0 0 10px #ff3c41;
 }
-  
-  .about-section {
+
+.about-section {
     padding: 80px 0;
-    background:url(assets/parallax_section_3.png);
+    background-color: #000000e4;
     backdrop-filter: brightness(80%);
     backdrop-filter: opacity();
     background-size: cover;
     color: #fff;
     text-align: center;
-    scroll-behavior: smooth;
-  }
-  
-  .section-title {
+}
+
+.section-title {
     font-size: 2.25rem;
     margin-bottom: 20px;
-  }
-  
-  .section-description {
-    position: relative;
+    color: #ff3c41;
+    text-shadow: 0 0 10px #ff3c41; /* Glowing red text */
+}
+
+.section-description {
     font-size: 1.125rem;
     margin-bottom: 40px;
+    opacity: 0.9;
+}
 
-  }
-  
-  .team-container {
-    position: relative;
+.team-container {
     width: 80vw;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    align-items: center;
-  }
-  
-  .team-member {
-    position: relative;
+    gap: 20px;
+}
+
+.team-member {
     width: 20vw;
-    margin: 2vw;
-  }
-  
-  .team-img {
+    margin: 1vw;
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.team-img {
+    background-color: #ffffff1f;
+    backdrop-filter: blur(10px);
     width: 100%;
+    background-color: #ff9a9d6c;
     border-radius: 2vh;
     box-shadow: 2px 4xp 10px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s ease;
@@ -87,34 +99,30 @@ body{
         border-radius: 0 0 2vh 2vh;
       }
 
-  .team-member:hover .overlay {
+.team-member:hover .overlay {
     opacity: 1;
-  }
-  
-  .social-icons {
+}
+
+.social-icons {
     display: flex;
     justify-content: center;
-  }
-  
-  .social-icons a {
+}
+
+.social-icons a {
     color: #fff;
     margin: 5px;
-    font-size: 1.5; 
+    font-size: 1.5rem;
     transition: color 0.3s ease;
-  }
-  
-  .social-icons a:hover {
-    color: #ff3e3e;
-  }
-  
-  .member-role {
+}
+
+.social-icons a:hover {
+    color: #ff3c41;
+    text-shadow: 0 0 5px #ff3c41;
+}
+
+.member-role {
     font-size: 1rem;
     margin-top: 10px;
-  }
-  
-  .container {
-    position: relative;
-    z-index: 1;
 }
 
 .background-effects {
@@ -132,10 +140,9 @@ body{
     top: 0;
     left: 0;
     width: 100vw;
-    height: 200vh; 
+    height: 200vh;
     display: flex;
     flex-wrap: wrap;
-    z-index: 0;
 }
 
 .cube {
@@ -144,16 +151,16 @@ body{
     background-color: rgba(255, 255, 255, 0.05);
     margin: 2px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
-    transition: transform 1.5s ease;
-    opacity: 0.9;
+    transition: transform 1.5s ease, opacity 1.5s ease;
+    opacity: 0.7;
 }
 
 .wave {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: radial-gradient(circle, rgba(255, 0, 0, 0.3), transparent 40%),
-                radial-gradient(circle, rgba(255, 0, 0, 0.6), transparent 60%);
+    background: radial-gradient(circle, rgba(255, 0, 0, 0.6), transparent 40%),
+                radial-gradient(circle, rgba(255, 0, 0, 0.9), transparent 60%);
     background-size: 100% 100%;
     animation: wave 2s linear infinite;
     z-index: 0;
@@ -189,7 +196,7 @@ body{
   .team-member {
     position: relative;
     width: 80vw;
-    margin: 10vw;
+    margin: 5vw;
   }
 
 }
