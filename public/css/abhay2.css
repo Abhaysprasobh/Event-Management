@@ -84,36 +84,51 @@ body {
 
 
 .login-form {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, 75%);
-    background-color: #3333335b;
+    position: relative;
+    top: 25vh;
+    left: 35vw ;
+    background-color: #0000000e;
+    backdrop-filter: blur(10px);
     padding: 2rem;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     z-index: 1;
-    width: 60%;
-    height: 35vh;
-    max-width: 300px;
+    width: 30vw;
+    height: 50vh;
 }
 
 .login-form h2 {
     margin-bottom: 1.5rem;
+    font-size: 2.5rem;
+    font-weight: 700;
     color: #e74c3c;
     text-align: center;
+    text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.411);
 }
 
 .login-form p{
+    font-size: 0.75rem;
     text-align: center;
+}
+
+.login-form a{
+    font-size: 1rem;
+    font-weight: 700;
 }
 
 .login-form .form-control {
     border-radius: 8px;
-    margin-left: 10px;
+    margin-left: 0.75vw;
+    margin-bottom: 10px;
+    padding: 1vh;
     background-color: #4444443a;
     border: 1px solid #555;
     color: #fff;
+}
+
+.login-form .form-label{
+    font-size: 1.125rem;
+    font-weight: 500;
 }
 
 .mb-3{
@@ -123,7 +138,7 @@ margin-top: 1vh;
 
 #btm{
     margin-top: 4vh;
-    margin-left: 10vw;
+    margin-left: 12vw;
 }
 
 .login-form .form-control:focus {
@@ -157,28 +172,26 @@ margin-top: 1vh;
 
 .registration-form {
     position: absolute;
-    top: 30%;
-    left: 30%;
-    background-color: #3333335b;
+    left: 25vw;
+    background-color: #0000000f;
+    backdrop-filter: blur(10px);
     padding: 2rem;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     z-index: 1;
-    width: 70%;
-    max-width: 500px;
-}
-
-.registration-form h2 {
-    margin-bottom: 1.5rem;
-    color: #e74c3c;
+    width: 40vw;
     text-align: center;
 }
 
-.registration-form .form-control {
-    border-radius: 8px;
-    background-color: #4444443a;
-    border: 1px solid #555;
-    color: #fff;
+.registration-form h2 {
+    position: relative;
+    top: 3vh;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #e74c3c;
+    text-align: center;
+    text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.411);
 }
 
 .registration-form .form-control:focus {
@@ -194,6 +207,13 @@ margin-top: 1vh;
     font-size: 1rem;
 }
 
+.registration-form label{
+    position: relative;
+    left: 5vw;
+    font-size: 1.125rem;
+    font-weight: 500;
+}
+
 .registration-form .btn-primary:hover {
     background-color: #c0392b;
 }
@@ -203,20 +223,30 @@ margin-top: 1vh;
     display: flex;
 }
 
+#year label{
+    margin-right: 1vw;
+}
+
 .registration-form .form-control {
     border-radius: 8px;
     background-color: #4444443a;
     border: 1px solid #555;
     color: #fff;
     padding: 0.5rem; /* Padding inside text fields */
+    position: relative;
+    left: 10vw;
 }
 
 .registration-form .btn-primary {
     background-color: #e74c3c;
+    color: white;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.427);
     border: none;
     border-radius: 8px;
-    padding: 0.5rem 1rem; /* Increased padding for buttons */
+    padding: 0.75rem 1.5rem; /* Increased padding for buttons */
     font-size: 1rem;
+    position: relative;
+    left: 15vw;
 }
 
 .registration-form label {
@@ -224,15 +254,6 @@ margin-top: 1vh;
     display: block; /* Make labels block elements for better spacing */
 }
 
-fieldset {
-    border-radius: 10px;
-    margin-bottom: 1.5rem; /* Space below fieldsets */
-}
-
-legend {
-    font-weight: bold;
-    margin-bottom: 0.5rem; /* Space below legend */
-}
 
 .strength-status {
     font-size: 0.9em;
@@ -251,7 +272,7 @@ legend {
     padding: 1vh 2vh;
     background-color: #c61e1e;
     color: white;
-    border-radius: 0.5vh;
+    border-radius: 1vh;
     cursor: pointer;
     font-size: 1rem;
   }

@@ -56,15 +56,13 @@
                     <input type="text" id="collegeName" name="collegeName" required class="form-control">
                 </div>
 
-                <fieldset>
-                    <div class="form-group">
+                    <div id="year" class="form-group">
                         <label>Year:</label>
                         <label><input type="radio" name="year" value="1st" required> 1st</label>
                         <label><input type="radio" name="year" value="2nd"> 2nd</label>
                         <label><input type="radio" name="year" value="3rd"> 3rd</label>
                         <label><input type="radio" name="year" value="4th"> 4th</label>
                     </div>
-                </fieldset>
 
                 <div class="form-group">
                     <label for="department">Department:</label>
@@ -73,8 +71,8 @@
 
                 <div class="form-group">
                     <label for="image" class="file-label">
-                        <i class="fas fa-upload"></i> Upload ID Card Photo (PDF)
-                        <input name="image" id="image" type="file" accept="image/*,application/pdf" required onchange="checkFileSize(this)" style="display:none;">
+                        <i class="fas fa-upload"></i> Upload Profile Photo
+                        <input name="image" id="image" type="file" accept="image/*" required onchange="checkFileSize(this)" style="display:none;">
                     </label>
                 </div>
 

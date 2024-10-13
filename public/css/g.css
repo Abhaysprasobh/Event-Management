@@ -87,11 +87,11 @@ body {
 .navbar-brand {
     font-size: 1.8rem;
     font-weight: bold;
-    backdrop-filter: blur(10px);
 }
 
 .nav-link {
     color: #fff;
+    backdrop-filter: blur(10px);
 }
 
 .nav-link:hover {
