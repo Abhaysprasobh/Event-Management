@@ -1,0 +1,23 @@
+{
+  "name": "event-management",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Abhaysprasobh/Event-Management.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Abhaysprasobh/Event-Management/issues"
+  },
+  "homepage": "https://github.com/Abhaysprasobh/Event-Management#readme",
+  "devDependencies": {
+    "express": "^4.21.1",
+    "nodemon": "^3.1.7"
+  }
+}
