@@ -545,7 +545,7 @@ body {
       #parallax-wrapper {
         position: relative;
         top: -35vw;
-        left: 0;
+        left: -5vw;
         width: 100vw;
         height: 100vh;
         overflow: hidden;
