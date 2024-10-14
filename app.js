@@ -2,6 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const { MongoClient } = require('mongodb');
 require("dotenv").config();
+const fs = require('fs');
 const path = require("path");
 const fileUpload = require("express-fileupload")
 
@@ -16,7 +17,13 @@ const app = express();
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.use(morgan("dev"));
-
+app.use(express.json()); // To parse JSON bodies
+app.use(express.urlencoded({ extended: true })); // To parse URL-encoded bodies
+app.use(fileUpload()); // To handle file uploads
+const uploadsDir = path.join(__dirname, 'public', 'uploads');
+if (!fs.existsSync(uploadsDir)) {
+    fs.mkdirSync(uploadsDir, { recursive: true });
+}
 
 // urls
 const url = process.env.url || "mongodb://localhost:27017/event-management";
@@ -81,43 +88,46 @@ app.get("/agenda", (req, res) => {
 
 
 app.post('/add-user', async (req, res) => {
-    const { username, firstName, lastName, email, password, collegeName, year, department } = req.body;
+    try {
+        const {  firstName, lastName, email, password, collegeName, year, department } = req.body;
 
-    const file = req.files.image;
-    console.log(file)
-    const savePath = path.join(__dirname, 'public', "uploads", file.name);
-    await file.mv(savePath, (err) => {
-        if (err) {
-            console.error('Error saving file:', err);
-            return res.status(500).send(err);
-        }
-    });
+        const file = req.files.image;
+        console.log(file);
+        const savePath = path.join(__dirname, 'public', "uploads", file.name);
 
-    const user = new User({
-        username,
-        firstName,
-        lastName,
-        email,
-        password,
-        collegeName,
-        year,
-        department,
-        image
-    });
+        await file.mv(savePath);
 
-    user.save()
-        .then((result) => {
-            res.json({ result: 'success', user: result });
-        })
-        .catch((err) => {
-            console.error('Error creating user:', err);
-            res.status(500).json({ result: 'error', message: 'Error creating user' });
+        const user = new User({
+            firstName,
+            lastName,
+            email,
+            password,
+            collegeName,
+            year,
+            department,
+            image: file.name
         });
 
-    
+        const result = await user.save();
+        res.json({ result: 'success', user: result });
+    } catch (err) {
+        console.error('Error creating user:', err);
+        res.status(500).json({ result: 'error', message: 'Error creating user' });
+    }
 });
 
 
+//  registered users
+app.get('/users', (req, res) => {
+    User.find()
+        .then(users => {
+            res.json(users);
+        })
+        .catch(err => {
+            console.error('Error retrieving users:', err);
+            res.status(500).json({ result: 'error', message: 'Error retrieving users' });
+        });
+});
 
 
 
