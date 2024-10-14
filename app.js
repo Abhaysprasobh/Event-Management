@@ -2,13 +2,13 @@ const express = require('express');
 const mongoose = require('mongoose');
 const { MongoClient } = require('mongodb');
 require("dotenv").config();
-const multer = require('multer');
 const path = require("path");
+const fileUpload = require("express-fileupload")
+
 
 // models
 const User = require("./models/User");
 const morgan = require('morgan');
-
 
 
 // server
@@ -80,8 +80,18 @@ app.get("/agenda", (req, res) => {
 
 
 
-app.post('/add-user', (req, res) => {
+app.post('/add-user', async (req, res) => {
     const { username, firstName, lastName, email, password, collegeName, year, department } = req.body;
+
+    const file = req.files.image;
+    console.log(file)
+    const savePath = path.join(__dirname, 'public', "uploads", file.name);
+    await file.mv(savePath, (err) => {
+        if (err) {
+            console.error('Error saving file:', err);
+            return res.status(500).send(err);
+        }
+    });
 
     const user = new User({
         username,
@@ -103,6 +113,8 @@ app.post('/add-user', (req, res) => {
             console.error('Error creating user:', err);
             res.status(500).json({ result: 'error', message: 'Error creating user' });
         });
+
+    
 });
 
 

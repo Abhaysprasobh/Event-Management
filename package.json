@@ -25,6 +25,7 @@
   },
   "dependencies": {
     "bson": "^4.7.2",
+    "express-fileupload": "^1.5.1",
     "mongodb": "^3.6.10",
     "mongoose": "^5.13.22",
     "path": "^0.12.7"
