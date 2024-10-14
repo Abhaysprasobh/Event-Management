@@ -1,45 +1,37 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const { MongoClient } = require('mongodb');
-
-const app = express();
-const path = require("path");
-const port = 3000 || process.env.port;
-
 require("dotenv").config();
+const multer = require('multer');
+const path = require("path");
+
+// models
+const User = require("./models/User");
+const morgan = require('morgan');
+
+
+
+// server
+const app = express();
 app.set("view engine", "ejs");
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static("public"));
+app.use(morgan("dev"));
 
 
-
-const url = "mongodb://localhost:27017" || process.env.url;
-const db_name = "event-management" || process.env.db_name;
-
-const client = new MongoClient(url);
-
-async function getData() {
-    try {
-        await client.connect();
-        const db = client.db(db_name);
-        const collection = db.collection("events");
-        const response = await collection.find({}).toArray();
-        console.log(response);
-    } catch (error) {
-        console.error("Error connecting to the database or fetching data:", error);
-    } finally {
-        await client.close();
-    }
-}
-
-// mongoose.connect
-
-app.listen(port, () => {
-    console.log(`Server is running at http://localhost:${port}`);
-});
+// urls
+const url = process.env.url || "mongodb://localhost:27017/event-management";
+const db_name = process.env.db_name || "event-management";
+const port = process.env.port || 3000;
 
 
-
-
+mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true })
+    .then(() => {
+        console.log("DB is connected successfully");
+        app.listen(port, () => {
+            console.log(`Server is running at http://localhost:${port}`);
+        });
+    })
+    .catch((error) => console.log(error));
 
 const renderIndex = (req, res) => {
     res.render("index");
@@ -79,6 +71,47 @@ app.get("/login", (req, res) => {
 app.get("/agenda", (req, res) => {
     res.render("agenda");
 });
+
+
+
+
+
+
+
+
+
+app.post('/add-user', (req, res) => {
+    const { username, firstName, lastName, email, password, collegeName, year, department } = req.body;
+
+    const user = new User({
+        username,
+        firstName,
+        lastName,
+        email,
+        password,
+        collegeName,
+        year,
+        department,
+        image
+    });
+
+    user.save()
+        .then((result) => {
+            res.json({ result: 'success', user: result });
+        })
+        .catch((err) => {
+            console.error('Error creating user:', err);
+            res.status(500).json({ result: 'error', message: 'Error creating user' });
+        });
+});
+
+
+
+
+
+
+
+
 
 // Handle 404
 app.use((req, res) => {
