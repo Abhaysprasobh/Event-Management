@@ -16,7 +16,7 @@
             </div>
         </div>
         <div class="login-form">
-            <form>
+            <form id = "login"  method="post">
                 <h2 class="text-center">Login</h2>
                 <div class="mb-3">
                     <label for="username" class="form-label">Username</label>
@@ -32,7 +32,40 @@
         </div>
     </div>
     <!-- <script src="js/abhay2.js"></script> -->
-        <script src="register.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+    $("#login").submit((e) => {
+        e.preventDefault();
+
+        const formData = {
+            email: $("#username").val(),
+            password: $("#password").val()
+        };
+
+        $.ajax({
+            url: 'http://localhost:3000/login',
+            data: JSON.stringify(formData),
+            method: "POST",
+            contentType: "application/json",
+            success: function (response) {
+                console.log(response);
+
+                if (response.result === "success") {
+                    alert("Login Successful");
+                    // Redirect or perform other actions after successful login
+                } else {
+                    alert("Login Failed");
+                }
+            },
+            error: function (err) {
+                console.error("Error:", err);
+                alert("An error occurred while logging in.");
+            },
+        });
+    });
+</script>
+
+
 
 </body>
 </html>

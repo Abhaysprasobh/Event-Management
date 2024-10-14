@@ -7,7 +7,7 @@ $("#register").submit((e) => {
     console.log(formData);
 
     $.ajax({
-        url: 'http://localhost:3000/add-user',
+        url: 'http://localhost:3000/register',
         data: formData,
         method: "POST",
         contentType: false, // Tell jQuery not to set contentType
@@ -27,3 +27,5 @@ $("#register").submit((e) => {
         },
     });
 });
+
+
