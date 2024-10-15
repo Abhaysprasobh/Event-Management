@@ -3,28 +3,25 @@ const url = process.env.url || "mongodb://localhost:27017/event-management";
 const db_name = process.env.db_name || "event-management";
 const port = process.env.port || 3000;
 
-const express = require("express");
 
-const app = express();
-mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true })
-    .then(() => {
-        console.log("DB is connected successfully");
-        app.listen(port, () => {
-            console.log(`Server is running at http://localhost:${port}`);
+const connect = () => {
+    return mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true })
+        .then((result) => {
+            console.log("DB is connected successfully");
+            return result;
+        })
+        .catch((error) => {
+            console.log(error);
+            console.log("Retrying connection in 30 seconds...");
+            return new Promise((resolve) => {
+                setTimeout(() => resolve(connect()), 30000);
+            });
         });
-    })
-    .catch((error) => console.log(error));
+}
 
-const userSchema = new mongoose.Schema({
-    name: String,
-    password: String
-});
-
-const UserModel = mongoose.model("users", userSchema);
+module.exports = connect;
 
 
 
-app.get("/getUsers", async (req, res) => {
-    const userData = await UserModel.find();
-    res.json(userData);
-})
+
+

@@ -18,31 +18,38 @@
             </div>
         </div>
 
-    
-        <div class="registration-form">
-            <h2>Register</h2>
-            <form method="POST" enctype="multipart/form-data" id = "register">
+<div class="registration-form">
+    <h2>Register</h2>
+    <% if (typeof error !=='undefined' ) { %>
+        <div class="alert alert-danger">
+            <%= error %>
+        </div>
+        <% } %>
+            <form method="POST" enctype="multipart/form-data" id="register">
                 <div class="form-group">
                     <label for="firstName">First Name:</label>
-                    <input type="text" id="firstName" name="firstName" required class="form-control">
+                    <input type="text" id="firstName" name="firstName"
+                        value="<%= typeof firstName !== 'undefined' ? firstName : '' %>" required class="form-control">
                 </div>
-                
+
                 <div class="form-group">
                     <label for="lastName">Last Name:</label>
-                    <input type="text" id="lastName" name="lastName" required class="form-control">
+                    <input type="text" id="lastName" name="lastName"
+                        value="<%= typeof lastName !== 'undefined' ? lastName : '' %>" required class="form-control">
                 </div>
-                
+
                 <div class="form-group">
                     <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required class="form-control">
+                    <input type="email" id="email" name="email" value="<%= typeof email !== 'undefined' ? email : '' %>"
+                        required class="form-control">
                 </div>
-                
+
                 <div class="form-group">
                     <label for="password">Password:</label>
                     <input type="password" id="password" name="password" required class="form-control">
                     <span id="passwordStrength" class="strength-status"></span>
                 </div>
-                
+
                 <div class="form-group">
                     <label for="confirmPassword">Confirm Password:</label>
                     <input type="password" id="confirmPassword" name="confirmPassword" required class="form-control">
@@ -51,26 +58,34 @@
 
                 <div class="form-group">
                     <label for="collegeName">College Name:</label>
-                    <input type="text" id="collegeName" name="collegeName" required class="form-control">
+                    <input type="text" id="collegeName" name="collegeName"
+                        value="<%= typeof collegeName !== 'undefined' ? collegeName : '' %>" required
+                        class="form-control">
                 </div>
 
-                    <div id="year" class="form-group">
-                        <label>Year:</label>
-                        <label><input type="radio" name="year" value="1st" required> 1st</label>
-                        <label><input type="radio" name="year" value="2nd"> 2nd</label>
-                        <label><input type="radio" name="year" value="3rd"> 3rd</label>
-                        <label><input type="radio" name="year" value="4th"> 4th</label>
-                    </div>
+                <div id="year" class="form-group">
+                    <label>Year:</label>
+                    <label><input type="radio" name="year" value="1st" <%=typeof year !=='undefined' && year==='1st'
+                            ? 'checked' : '' %> required> 1st</label>
+                    <label><input type="radio" name="year" value="2nd" <%=typeof year !=='undefined' && year==='2nd'
+                            ? 'checked' : '' %>> 2nd</label>
+                    <label><input type="radio" name="year" value="3rd" <%=typeof year !=='undefined' && year==='3rd'
+                            ? 'checked' : '' %>> 3rd</label>
+                    <label><input type="radio" name="year" value="4th" <%=typeof year !=='undefined' && year==='4th'
+                            ? 'checked' : '' %>> 4th</label>
+                </div>
 
                 <div class="form-group">
                     <label for="department">Department:</label>
-                    <input type="text" id="department" name="department" required class="form-control">
+                    <input type="text" id="department" name="department"
+                        value="<%= typeof department !== 'undefined' ? department : '' %>" required
+                        class="form-control">
                 </div>
 
                 <div class="form-group">
                     <label for="image" class="file-label">
                         <i class="fas fa-upload"></i> Upload Profile Photo
-                        <input name="image" id="image" type="file" accept="image/*" required  style="display:none;">
+                        <input name="image" id="image" type="file" accept="image/*" required style="display:none;">
                     </label>
                 </div>
 
@@ -78,7 +93,9 @@
                     <button type="submit" class="btn btn-primary">Register</button>
                 </div>
             </form>
-        </div>
+</div>
+
+
     </div>
     <!-- <script src="js/abhay2.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
