@@ -20,14 +20,11 @@ const morgan = require('morgan');
 
 // server
 const app = express();
-app.use(routes);
-
-app.set("view engine", "ejs");
 app.use(express.static("public"));
+app.set("view engine", "ejs");
 app.use(morgan("dev"));
 app.use(express.json()); 
 app.use(express.urlencoded({ extended: true })); 
-
 
 // session 
 app.use(session({
@@ -43,6 +40,8 @@ app.use(fileUpload({
     tempFileDir: path.join(__dirname, 'tmp'),
     limits: { fileSize: 4 * 1024 * 1024 } 
 }));
+
+app.use(routes);
 
 
 
