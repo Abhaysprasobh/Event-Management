@@ -1,11 +1,12 @@
 const mongoose = require("mongoose");
-const url = process.env.url || "mongodb://localhost:27017/event-management";
-const db_name = process.env.db_name || "event-management";
-const port = process.env.port || 3000;
+const url = process.env.URL || "mongodb://localhost:27017/event-management";
+const db_name = process.env.DB_NAME || "event-management";
+const port = process.env.PORT || 3000;
 
 
 const connect = () => {
-    return mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true })
+    return mongoose.connect(url, {
+        useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true })
         .then((result) => {
             console.log("DB is connected successfully");
             return result;
